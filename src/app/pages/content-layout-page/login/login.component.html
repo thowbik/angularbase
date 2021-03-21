@@ -1,0 +1,89 @@
+<form name="loginForm" [formGroup]="loginForm">
+  <section id="login">
+    <div class="loginpage ">
+      <div class="row full-height-vh ">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 left-slider-content">
+          <ngb-carousel>
+            <ng-template ngbSlide>
+              <div class="carousel-inner">
+                <img src="assets/img/photos/slider2.jpg" alt="Random first slide">
+                <div class="carousel-caption carousaltop">
+              
+                </div>
+              </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="carousel-inner">
+               <img src="assets/img/photos/slider1.jpg" alt="Random second slide">
+               <div class="carousel-caption carousaltop">
+               </div>
+               </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="carousel-inner">
+              <img src="assets/img/photos/slider3.jpg"  alt="Random third slide">
+              <div class="carousel-caption carousaltop">
+              </div>
+              </div>
+            </ng-template>
+         
+
+
+          </ngb-carousel>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 login-img">
+          <div class="form-group-row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <h1 class="header"><img src="assets/img/logos/logo-big-black.png">E-Governance Readiness Assessment </h1>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div style="color: #fff;">
+                <h3>Login</h3>
+                <h4>Welcome back,</h4>
+                <p>
+                  Please sign in to your account.
+                </p>
+                <div class="form-group row">
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <label for="email">Username</label>
+                    <input type="text" id="email" class="form-control" formControlName="email" placeholder="Username" required>
+                    <small class="form-text text-muted danger"
+                      *ngIf="!loginForm.get('email').valid && (loginForm.get('email').dirty || loginForm.get('email').touched)">
+                      Username is required</small>
+                  </div>
+
+                  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" formControlName="password" placeholder="Password" />
+                    <small class="form-text text-muted danger"
+                      *ngIf="!loginForm.get('password').valid && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                      Password is required</small>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mt-2">
+                  <div class="forgot-password-option">
+                    <a (click)="openAddFileDialog()" class="text-color">Forgot
+                      Password ?</a>
+                  </div>
+                </div>
+                <div class="fg-actions d-flex justify-content-between mt-3">
+                  <!-- <button type="button" class="btn btn-outline-primary mr-1" (click)="onRegister()">
+                    <a class="text-decoration-none">Register</a>
+                  </button> -->
+                  <button type="button" class="btn btn-outline-primary mr-1" (click)="onQuestion()">
+                    <a class="text-decoration-none">Assessment</a>
+                  </button>
+                  <button type="submit" class="btn btn-outline-primary recover-pass" (click)="onLogin()">
+                    Login
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

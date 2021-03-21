@@ -1,0 +1,13 @@
+<div class="flex-header">
+  <h2 class="form-section header"><b>Help</b>
+    <a href="#" (click)="onCancel();$event.preventDefault()"><img
+        style="height: 27px;float: right;" matTooltip="Close" matTooltipPosition="above" src="assets/img/svg/cancel.svg"></a>
+  </h2>
+</div>
+<h3><b>{{helpDetail.deptName}}</b>
+  <h5>({{helpDetail.groupName}})</h5>
+</h3>
+<div class="seperator"></div>
+<br/>
+<label [innerHTML]="helpDetail.helpContent">
+</label>

@@ -1,0 +1,131 @@
+<div class="row text-left">
+  <div class="col-md-8 offset-md-2">
+    <div class="card">
+      <div class="row header-layout" style="margin-top: 5px;">
+        <div class="col-md-2 col-sm-2">
+          <img src="assets/img/logos/tamilnadu-logo.png">
+        </div>
+        <div class="col-md-8 col-sm-8 text-center" style="color: black !important;">
+          <h3>TamilNadu e-Governance Agency </h3>
+          <h6>Information Technology Department</h6>
+          <h6>Government of Tamil Nadu</h6>
+        </div>
+        <div class="col-md-2 col-sm-2">
+          <img src="assets/img/logos/logo-big-black.png">
+        </div>
+      </div>
+      <h3 style="color:#673594 !important;text-align:center;"><b>e-Governance Readiness Assessment</b></h3>
+      <div class="seperator"></div>
+      <div class="card-content">
+        <div class="card-body login-img">
+          <div class="px-3">
+            <div class="row">
+              <mat-progress-bar class="col-md-10" mode="determinate" value="{{progressValue}}"></mat-progress-bar>
+              <div class="col-md-2" style="margin-top: -10px;margin-left: -5px;">
+                &nbsp;<span style="font-size:12px;color: #ec1194;font-weight: bold;">Step {{seqNo}} of {{groupResult.length}}</span>
+                <span (click)="onHelp()" title="Help" class="spanDesign">&nbsp;<i class="fa fa-question-circle fa-blink fa-2x"></i>
+                  <!-- <img src="assets/img/help.gif"/> -->
+                </span>
+              </div>
+            </div>
+            <br />
+            <div class="row">
+              <div class=" title-cirlce">
+                <i class="{{titleIcon}} title-icon"></i>
+              </div>
+
+              <div class="col-md-10 title-div">
+                <h3 class="title-heading" style="color: black !important;">{{title}}</h3>
+                <h6 class="sub-title">({{departmentName}})</h6>
+              </div>
+
+            </div>
+            <form class="form form-horizontal needs-validation question-content" novalidate>
+              <div class="ques-inner-content">
+                <div class="form-group" [formGroup]="form" *ngFor="let group of groupList">
+                  <div class="form-group row" [hidden]="group.isChild">
+                    <div class="col-md-5">
+                      <label>{{group.name}}&nbsp;<span style="font-size: 15px;" *ngIf="group.isMandatory"
+                          class="danger"><b>*</b></span></label>
+                    </div>
+                    <div class="col-md-5" *ngIf="group.fieldType == 'text'">
+                      <input type="text" class="form-control" [placeholder]="group.placeHolder"
+                        [formControlName]="group.formControlName" autocomplete="off">
+                      <small class="form-text text-muted danger"
+                        *ngIf="!form.get(group.formControlName).valid && (form.get(group.formControlName).dirty || form.get(group.formControlName).touched)">
+                        {{group.name}} is required
+                      </small>
+                    </div>
+                    <div class="col-md-5" *ngIf="group.fieldType == 'textarea'">
+                      <textarea class="form-control" rows="3" [placeholder]="group.placeHolder"
+                        [formControlName]="group.formControlName"></textarea>
+                      <small class="form-text text-muted danger"
+                        *ngIf="!form.get(group.formControlName).valid && (form.get(group.formControlName).dirty || form.get(group.formControlName).touched)">
+                        {{group.name}} is required
+                      </small>
+                    </div>
+                    <div class="col-md-5" *ngIf="group.fieldType == 'number'">
+                      <input type="number" min="0" class="form-control" [formControlName]="group.formControlName"
+                        [placeholder]="group.placeHolder" autocomplete="off">
+                      <small class="form-text text-muted danger"
+                        *ngIf="!form.get(group.formControlName).valid && (form.get(group.formControlName).dirty || form.get(group.formControlName).touched)">
+                        {{group.name}} is required
+                      </small>
+                    </div>
+                    <div class="col-md-5" *ngIf="group.fieldType == 'email'">
+                      <input type="email" class="form-control" [placeholder]="group.placeHolder"
+                        [formControlName]="group.formControlName" autocomplete="off">
+                      <!-- pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" -->
+                      <small class="form-text text-muted danger"
+                        *ngIf="!form.get(group.formControlName).valid && (form.get(group.formControlName).dirty || form.get(group.formControlName).touched)">
+                        {{group.name}} is required
+                      </small>
+                    </div>
+                    <div class="col-md-5" *ngIf="group.fieldType == 'select'">
+                      <select class="form-control txtalign" [formControlName]="group.formControlName"
+                        (change)="onSelectedChange($event.target.value, group.id)">
+                        <option *ngFor="let item of group.fieldDataSource" [value]="item.id">
+                          {{item.value}}
+                        </option>
+                      </select>
+                      <small class="form-text text-muted danger"
+                        *ngIf="!form.get(group.formControlName).valid && (form.get(group.formControlName).dirty || form.get(group.formControlName).touched)">
+                        {{group.name}} is required
+                      </small>
+                    </div>
+                    <div class="col-md-5" *ngIf="group.fieldType == 'radio'">
+                      <mat-radio-group aria-label="Select an option" (change)="onRadioChange($event.value, group.id)"
+                        [formControlName]="group.formControlName">
+                        <mat-radio-button *ngFor="let item of group.fieldDataSource" [value]="item.id">
+                          {{item.value}}&nbsp;&nbsp;
+                        </mat-radio-button>
+                      </mat-radio-group>
+                      <small class="form-text text-muted danger"
+                        *ngIf="!form.get(group.formControlName).valid && (form.get(group.formControlName).dirty || form.get(group.formControlName).touched)">
+                        {{group.name}} is required
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+            <!-- <div >
+              <div class="hr-sep-line"></div>
+            </div> -->
+            <div class="form-actions right" style="float: right;margin-right: 52px;">
+              <button type="reset" class="btn btn-raised btn-info mr-1" (click)="onBack()">
+                <i class="fa fa-angle-double-left"></i>
+                Back
+              </button>
+              <button type="submit" class="btn btn-primary" style="color:white !important;" (click)="onNext()">
+                Next
+                <i class="fa fa-angle-double-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

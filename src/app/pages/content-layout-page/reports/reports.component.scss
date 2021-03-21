@@ -1,0 +1,159 @@
+.default-button {
+    background-color: #ec1194 !important; 
+    // width: 150px;    
+}
+.default-button:focus, .default-button.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #ec1194 !important;
+   
+}
+.btn-primary {
+    color: #fff;
+    background-color:  #ec1194;
+    border-color: #ec1194;
+}
+.footer-layout {
+    position: fixed;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    place-content: center;
+    width: 100%;
+}
+.seperator
+{
+    border-top: 1px solid #d3dce9;
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+    background-color:  #ec1194 !important;
+}
+.text-center
+{
+    text-align: center;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    margin: auto;
+    align-items: center;
+    vertical-align: middle;
+    align-self: center;
+    display: flex;
+}
+.header-layout {
+    margin-top: 20px !important;
+}
+
+
+.title-cirlce
+{
+    background-color: purple;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: 5px;
+}
+.group-title-cirlce {
+    background-color: purple;
+    border-radius: 50%;
+    width: 80px;
+    height :80px;
+    margin-top: 10px; 
+}
+
+.title-heading
+{
+    margin-top:15px;
+    padding-top: 38px;
+    padding-left: 20px;
+    // padding-bottom: 10px;
+}
+
+.title-icon
+{
+    font-size: 26px;
+    margin: 22px 21px 0px;
+    color: white;
+}
+.small-title-icon {
+    font-size: 22px;
+    margin: 18px 19px 0px;
+    color: white;
+}
+
+.question-content
+{
+ margin-left:3%;
+ border-left: 1px solid #80008087;
+ margin-top:-10px;
+}
+.ques-inner-content
+{
+    margin-left: 5%;
+    margin-right: 0.5%;
+}
+
+.hr-sep-line
+{
+    border:1px solid #e9e9e9;
+    margin-left: 5%;
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.title-div
+{
+    top:-40px;
+ margin-left:-10px;
+ margin-top: -10px;
+}
+.header-title-div {
+    top:-40px;
+    margin-left:-10px;
+    border-bottom: 1px solid #80008087;
+    margin-top: -10px;
+}
+.seperator-line {
+    // border-bottom: 1px solid #80008087;
+}
+h1, h2, h3, h4, p {
+     color:black !important; 
+}
+.inner-layout {
+    margin-left: 15%;
+}
+.layout-gap {
+    margin-left: 2px;
+}
+.icon-layout {
+   cursor: pointer !important;
+}
+.hand-symbol {
+    cursor: pointer !important;   
+}
+.title-header {
+    padding-top: 15px;
+    margin-bottom: 0px;
+}
+.section-title {
+    padding-top: 0px !important;
+}
+.group-title-cirlce {
+    background-color: purple;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+.section-header-layout{
+    margin-top: -38px;
+    margin-bottom: 15px;
+}
+.border-layout {
+    border-bottom: 1px solid purple;
+}  
+.text-bold {
+    font-weight: bold !important;
+}

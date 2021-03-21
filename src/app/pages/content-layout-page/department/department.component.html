@@ -1,0 +1,98 @@
+<!-- <div class="page-container">
+
+        <div class="border-layout">
+
+
+                <div class="row center">
+                        <div class="col-md-6 container-layout">
+                                <label class="label">Department Name</label>
+                        </div>
+                        <div class="col-md-6 container-layout">
+                                <mat-select class="select-layout" (selectionChange)="getSelectedItem($event)">
+                                        <mat-option *ngFor="let item of sampleData" [value]="item.key">
+                                                {{item.value}}
+                                        </mat-option>
+                                </mat-select>
+                        </div>
+
+                </div>
+                <div class="row footer-layout">
+                        <button class="button btn btn-primary mr-1 btnsave" type="submit" (click)="onSubmit()">
+                                Next
+                        </button>
+                </div>
+        </div>
+
+</div> -->
+
+<div class="row text-left">
+        <div class="col-md-8 offset-md-2">
+                <div class="card">
+                        <div class="row header-layout" style="margin-top: 5px;">
+                                <div class="col-md-2 col-sm-2">
+                                        <img src="assets/img/logos/tamilnadu-logo.png">
+                                </div>
+                                <div class="col-md-8 col-sm-8 text-center">
+                                        <h3>TamilNadu e-Governance Agency </h3>
+                                        <h6>Information Technology Department</h6>
+                                        <h6>Government of Tamil Nadu</h6>
+                                </div>
+                                <div class="col-md-2 col-sm-2">
+                                        <img src="assets/img/logos/logo-big-black.png">
+                                </div>
+                        </div>
+                        <h3 style="color:#673594;text-align:center;"><b>e-Governance Readiness Assessment</b></h3>
+                        <div class="seperator"></div>
+                        <div class="card-content">
+                                <div class="card-body login-img">
+                                        <div class="px-3">
+
+                                                <form [formGroup]="form"
+                                                        class="form form-horizontal needs-validation question-content"
+                                                        novalidate>
+                                                        <div class="form-group row">
+                                                                <div class="col-md-4">
+                                                                        <label>Department Name&nbsp;<span
+                                                                                        style="font-size: 15px;"
+                                                                                        class="danger"><b>*</b></span></label>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                        <select class="select-layout"
+                                                                                formControlName="dept"
+                                                                                (change)="getSelectedItem($event.target.value)">
+                                                                                <option *ngFor="let item of deptList"
+                                                                                        [value]="item.key">
+                                                                                        {{item.value}}
+                                                                                </option>
+                                                                        </select>
+                                                                        <small class="form-text text-muted danger"
+                                                                                *ngIf="!form.get('dept').valid && (form.get('dept').dirty || form.get('dept').touched)">
+                                                                                Department Name is required
+                                                                        </small>
+                                                                </div>
+                                                        </div>
+                                                        <br />
+                                                        <br />
+                                                        <div class="row center">
+                                                                <button class="button btn mr-1 btnsave" type="submit"
+                                                                        (click)="onSubmit()">
+                                                                        Next
+                                                                </button>
+                                                        </div>
+                                                </form>
+
+                                        </div>
+                                </div>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                        </div>
+                </div>
+        </div>
+</div>

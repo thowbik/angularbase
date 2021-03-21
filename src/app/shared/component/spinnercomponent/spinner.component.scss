@@ -1,0 +1,64 @@
+.spinner {
+    margin: 100px auto !important;
+    width: 40px !important;
+    height: 40px !important;
+    position: relative !important;
+    text-align: center !important;
+    -webkit-animation: sk-rotate 2.0s infinite linear !important;
+    animation: sk-rotate 2.0s infinite linear !important;
+  }
+  
+  .dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #039BE5;
+    border-radius: 100%;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .dot2 {
+    top: auto !important;
+    bottom: 0 !important;
+    -webkit-animation-delay: -1.0s !important;
+    animation-delay: -1.0s !important;
+  }
+  
+  @-webkit-keyframes sk-rotate {
+    100% {
+      -webkit-transform: rotate(360deg)
+    }
+  }
+  
+  @keyframes sk-rotate {
+    100% {
+      transform: rotate(360deg);
+      -webkit-transform: rotate(360deg)
+    }
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% {
+      -webkit-transform: scale(0.0)
+    }
+  
+    50% {
+      -webkit-transform: scale(1.0)
+    }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    }
+  
+    50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+  

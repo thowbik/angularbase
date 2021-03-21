@@ -1,0 +1,107 @@
+// Login Page
+.form{
+    overflow: true;
+  }
+  #welcome {
+      // background-image: url('../../../../assets/img/gallery/light-bg.jpg');
+      // background-size: 100% 100%;
+      // background-repeat: no-repeat;
+       
+      .btn-outline-primary{
+        border-color: #ec1194 !important;
+         color:#fff!important;
+      &:hover{
+        background-color: #ec1194 !important;
+        border-color: #fff !important;
+      }
+  
+      }
+    
+      .btn-outline-primary {      
+        background-color: #ec1194 !important;;     
+    }
+       
+        button.btn.btn-primary{
+          background-color: #ec1194 !important;
+          border-color:#ec1194 !important;
+          color: #fff !important;
+      
+        // .recover-pass {
+        //   color: #fff !important;
+        // }
+      }
+          
+     
+       .welcomePage{
+              //background-color: white !important;
+              background-color: #673594 !important;
+              overflow:hidden !important;
+            }
+          
+
+            .centerAlign {       
+                width: 700px;
+                height: 300px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              }
+        
+              .carousel-inner
+              {
+                  overflow:visible;
+              }
+          
+             
+
+  
+    }
+  
+    
+    .contentInformataion{
+      font-size: 2.1rem !important;
+      font-family: initial !important;
+      font-weight: 500 !important;
+      color: #fff  !important;
+      white-space: wrap;
+      text-align: center;
+    }
+  
+    .continueButton{
+      position: relative;
+        left: 35%;
+    }
+    
+    img {
+      vertical-align: middle;
+      border-style: none;
+      margin: auto;
+      align-items: center;
+      vertical-align: middle;
+      align-self: center;
+      display: flex;
+  }
+
+  
+    .left-slider-content
+    {
+      display: block;
+    }
+
+    .card {
+      border: 0;
+      margin: 0; 
+      box-shadow: 0 6px 0px 0 rgba(0, 0, 0, 0.01), 0 15px 32px 0 rgba(0, 0, 0, 0.06);
+      border-radius: 0px;
+  }
+    
+    // h1,h2,h3,h4,p{
+    //   color: #fff !important;
+    // }
+  
+ 
+     
+   
+            
+         

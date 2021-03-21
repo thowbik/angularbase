@@ -1,0 +1,225 @@
+// Login Page
+.form{
+  overflow: true;
+}
+#login {
+    background-image: url('../../../../assets/img/gallery/light-bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  
+    .login-img {
+      padding:50px !important;
+     // background: #f0f0f0;
+    }
+  
+    // .login-btn {
+    //   .btn.btn-outline-primary {
+    //     &:hover {
+    //       a {
+    //         color: #047D00;
+    //       }
+    //     }
+    //   }
+    // }
+    .btn-outline-primary{
+      border-color: #ec1194 !important;
+       color:#fff!important;
+    &:hover{
+      background-color: #ec1194 !important;
+      border-color: #fff !important;
+    }
+
+    }
+  
+    .btn-outline-primary {      
+      background-color: #ec1194 !important;     
+  }
+     
+      button.btn.btn-primary{
+        background-color: #ec1194 !important;
+        border-color:#ec1194 !important;
+        color: #fff !important;
+    
+      // .recover-pass {
+      //   color: #fff !important;
+      // }
+    }
+    
+  
+    .forgot-password-option,
+    .remember-me {
+  
+      a.text-decoration-none,
+      .custom-control-label {
+        font-size: 14px;
+      }
+    }
+   
+   
+     .loginpage{
+            //background-color: white !important;
+            background-color: #673594 !important;
+            overflow:hidden !important;
+          }
+        
+        
+
+  }
+
+  .carousel-caption.carousaltop{
+    margin: auto !important;
+    right: 10% !important;
+    bottom: 40% !important;
+
+  }
+.text-color{
+    color: #fff !important;
+  }
+
+
+  .header{
+    font-size: 3.2rem !important;
+    font-family: initial !important;
+    font-weight: 500 !important;
+    color: #fff  !important;
+    white-space: nowrap;
+  }
+
+  .left-slider-content
+  {
+    display: block;
+  }
+  
+  // h1,h2,h3,h4,p{
+  //   color: #fff !important;
+  // }
+
+  /* Smartphones (portrait and landscape) ----------- */
+// @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+//   /* Styles */
+//   .left-slider-content
+//     {
+//       display: none;
+//     }
+//   }
+  
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+  /* Styles */
+  .left-slider-content
+  {
+    display: none;
+  }
+  .head{
+    font-size: 1.0rem !important;
+  }
+  .header{
+    font-size: 1.0rem !important;
+    font-family: initial !important;
+    font-weight: 500 !important;
+    color: #fff  !important;
+    white-space: nowrap;
+  }
+
+  }
+  
+  /* Smartphones (portrait) ----------- */
+  @media only screen and (max-width : 320px) {
+  /* Styles */
+  .left-slider-content
+  {
+    display: none ;
+  }
+  }
+
+  @media (min-width: 992px){
+
+    .left-slider-content
+    {
+      display: block;
+    }
+    
+  }
+  
+  @media only screen and (min-width : 756px) {
+    /* Styles */
+    .left-slider-content
+    {
+      display: block;
+    }
+    .header{
+      font-size: 2.5rem !important;
+      font-family: initial !important;
+      font-weight: 500 !important;
+      color: #fff  !important;
+      white-space: nowrap;
+    }
+  
+    }
+
+      @media only screen and (max-width : 990px) and (min-width : 770px){
+        /* Styles */
+        .left-slider-content
+        {
+          display: block;
+        }
+        .header{
+          font-size: 1.7rem !important;
+          font-family: initial !important;
+          font-weight: 500 !important;
+          color: #fff  !important;
+          white-space: nowrap;
+        }
+      
+        }
+
+        @media only screen and (max-width : 771px) and (min-width : 570px){
+          /* Styles */
+          .left-slider-content
+          {
+            display: block;
+          }
+          .header{
+            font-size: 1.7rem !important;
+            font-family: initial !important;
+            font-weight: 500 !important;
+            color: #fff  !important;
+            white-space: nowrap;
+          }
+        
+          }
+
+          @media only screen and (max-width : 571px) and (min-width : 520px){
+            /* Styles */
+            .left-slider-content
+            {
+              display: block;
+            }
+            .header{
+              font-size: 1.7rem !important;
+              font-family: initial !important;
+              font-weight: 500 !important;
+              color: #fff  !important;
+              white-space: nowrap;
+            }
+          
+            }
+            @media only screen and (max-width : 520px) and (min-width : 393px){
+              /* Styles */
+              .left-slider-content
+              {
+                display: block;
+              }
+              .header{
+                font-size: 1.7rem !important;
+                font-family: initial !important;
+                font-weight: 500 !important;
+                color: #fff  !important;
+                white-space: nowrap;
+              }
+            
+              }
+   
+ 
+          
+       

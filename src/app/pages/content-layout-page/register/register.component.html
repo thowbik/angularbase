@@ -1,0 +1,275 @@
+<!-- <div class="row text-left">
+  <div class="col-md-8 offset-md-2">
+      <div class="card">
+          <div class="card-content">
+              <div class="px-3">
+                  <form [formGroup]="form" class="form form-horizontal">
+                      <div class="form-body pt-2">
+                          <h2>Registration</h2>
+                          <h4 class="form-section"><i class="ft-file-text"></i><b> Department Info</b></h4>
+                          <div class="form-group row">
+                              <mat-form-field class="col-md-6" appearance="outline">
+                                  <mat-label>Name</mat-label>
+                                  <input matInput placeholder="Name" formControlName="name">
+                                  <mat-error *ngIf="form.get('name').hasError('required')">
+                                      Name is required
+                                  </mat-error>
+                                  <mat-error *ngIf="form.get('name').hasError('pattern')">
+                                    Please enter valid Name
+                                   </mat-error>
+                              </mat-form-field>
+
+                              <mat-form-field class="col-md-6" appearance="outline">
+                                  <mat-label>Contact No</mat-label>
+                                  <input matInput
+                                  maxlength="10" placeholder="Contact No" formControlName="contactNo">
+                                  <mat-error *ngIf="form.get('contactNo').hasError('required')">
+                                      Contact No is required
+                                  </mat-error>
+                                  <mat-error *ngIf="form.get('contactNo').hasError('pattern')">
+                                    Please enter valid Number
+                                   </mat-error>
+                              </mat-form-field>
+                          </div>
+                          <div class="form-group row">
+                              <mat-form-field class="col-md-6" appearance="outline">
+                                  <mat-label>Email</mat-label>
+                                  <input matInput placeholder="Email" formControlName="email">
+                                  <mat-error *ngIf="form.get('email').hasError('required')">
+                                      Email is required
+                                  </mat-error>
+                                  <mat-error *ngIf="form.get('email').hasError('email')">
+                                    Please enter valid Email
+                                </mat-error>
+                              </mat-form-field>
+
+                              <mat-form-field class="col-md-6" appearance="outline">
+                                  <mat-label>GST No</mat-label>
+                                  <input matInput  maxlength="15" placeholder="GST No" formControlName="gSTNo">
+                                  <mat-error *ngIf="form.get('gSTNo').hasError('required')">
+                                    GST No is required
+                                </mat-error>
+                                <mat-error *ngIf="form.get('gSTNo').hasError('pattern')">
+                                    Please enter valid GST No
+                              </mat-error>
+                              </mat-form-field>
+                          </div>
+                          <div class="form-group row">
+                              <mat-form-field class="col-md-12" appearance="outline">
+                                  <mat-label>Address</mat-label>
+                                  <textarea matInput placeholder="Address" formControlName="address"> </textarea>
+                                  <mat-error>
+                                      Address is required
+                                  </mat-error>
+                              </mat-form-field>
+                          </div>
+
+                          <h4 class="form-section"><i class="ft-user"></i><b> Contact Person Info</b></h4>
+
+                          <div class="form-group row">
+                              <mat-form-field class="col-md-6" appearance="outline">
+                                  <mat-label>Name</mat-label>
+                                  <input matInput placeholder="Name" formControlName="contactPersonName">
+                                <mat-error *ngIf="form.get('contactPersonName').hasError('required')">
+                                    Name is required
+                                </mat-error>
+                                <mat-error *ngIf="form.get('contactPersonName').hasError('pattern')">
+                                    Please enter valid Name
+                                </mat-error>
+                              </mat-form-field>
+
+                              <mat-form-field class="col-md-6" appearance="outline">
+                                  <mat-label>Contact No</mat-label>
+                                  <input matInput maxlength="10" placeholder="Contact No" formControlName="contactPersonNo">
+                                  <mat-error *ngIf="form.get('contactPersonNo').hasError('required')">
+                                    Contact No is required
+                                </mat-error>
+                                <mat-error *ngIf="form.get('contactPersonNo').hasError('pattern')">
+                                    Please enter valid Number
+                                 </mat-error>
+                              </mat-form-field>
+                          </div>
+
+                          <div class="form-group row">
+                              <mat-form-field class="col-md-6" appearance="outline">
+                                  <mat-label>Email</mat-label>
+                                  <input matInput placeholder="Email" formControlName="contactPersonEmail">
+                                  <mat-error *ngIf="form.get('contactPersonEmail').hasError('required')">
+                                    Email is required
+                                </mat-error>
+                                <mat-error *ngIf="form.get('contactPersonEmail').hasError('email')">
+                                    Please enter valid Email
+                                </mat-error>
+                              </mat-form-field>
+                          </div>
+                          <div class="form-actions right">
+                              <button type="reset" class="btn btn-raised btn-warning mr-1" (click)="onReset()">
+                                  <i class="ft-x"></i> Cancel
+                              </button>
+                              <button type="submit" class="btn btn-raised btn-primary" (click)="onClick()">
+                                  <i class="fa fa-check-square-o"></i> Save
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div> -->
+
+<div class="row text-left">
+  <div class="col-md-8 offset-md-2">
+    <div class="card">
+      <div class="card-content">
+        <div class="card-body login-img">
+          <div class="px-3">
+            <form [formGroup]="form" class="form form-horizontal" novalidate>
+              <div class="form-body pt-2">
+                <h2>Registration</h2>
+                <h4 class="form-section"><i class="ft-file-text"></i><b> Department Information</b></h4>
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="name">NAME</label>
+                    <input type="text" id="name" class="form-control" formControlName="name" required>
+                    <small class="form-text text-muted danger"
+                      *ngIf="!form.get('name').valid && (form.get('name').dirty || form.get('name').touched)">
+                      Please enter a valid name
+                    </small>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="contactNo">CONTACT NO</label>
+                    <input type="text" id="contactNo" class="form-control" formControlName="contactNo" maxlength="10"
+                      required>
+                    <small class="form-text text-muted danger"
+                      *ngIf="!form.get('contactNo').valid && (form.get('contactNo').dirty || form.get('contactNo').touched)">
+                      Please enter a valid contact no
+                    </small>
+                  </div>
+
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="email">EMAIL</label>
+                    <input
+                      type="text"
+                      id="email"
+                      class="form-control"
+                      formControlName="email"
+                      required  pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$">
+                    <small
+                      class="form-text text-muted danger"
+                      *ngIf="!form.get('email').valid && (form.get('email').dirty || form.get('email').touched)">
+                      Please enter a valid email
+                    </small>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="gSTNo">GST NO</label>
+                    <input type="text" id="gSTNo" class="form-control" maxlength="15" formControlName="gSTNo" required>
+                    <small class="form-text text-muted danger"
+                      *ngIf="!form.get('gSTNo').valid && (form.get('gSTNo').dirty || form.get('gSTNo').touched)">
+                      Please enter a valid GST no
+                    </small>
+                  </div>
+
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label for="address">BILLING ADDRESS</label>
+                    <textarea class="form-control" rows="5" id="billingAddress" formControlName="billingAddress"
+                      required></textarea>
+                    <small class="form-text text-muted danger"
+                      *ngIf="!form.get('billingAddress').valid && (form.get('billingAddress').dirty || form.get('billingAddress').touched)">
+                      Please enter a valid address
+                    </small>
+                  </div>
+                </div>
+
+                <h4 class="form-section"><i class="ft-user"></i><b> Contact Person Information</b></h4>
+
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="contactPersonName">NAME</label>
+                    <input type="text" id="contactPersonName" class="form-control" formControlName="contactPersonName"
+                      required>
+                    <small class="form-text text-muted danger"
+                      *ngIf="!form.get('contactPersonName').valid && (form.get('contactPersonName').dirty || form.get('contactPersonName').touched)">
+                      Please enter a valid name
+                    </small>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="contactPersonNo">CONTACT NO</label>
+                    <input type="text" id="contactPersonNo" class="form-control" maxlength="10"
+                      formControlName="contactPersonNo" required>
+                    <small class="form-text text-muted danger"
+                      *ngIf="!form.get('contactPersonNo').valid && (form.get('contactPersonNo').dirty || form.get('contactPersonNo').touched)">
+                      Please enter a valid contact no
+                    </small>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label for="contactPersonEmail">EMAIL</label>
+                    <input
+                      type="text"
+                      id="contactPersonEmail"
+                      class="form-control"
+                      formControlName="contactPersonEmail"
+                      required  pattern="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$">
+                    <small
+                      class="form-text text-muted danger"
+                      *ngIf="!form.get('contactPersonEmail').valid && (form.get('contactPersonEmail').dirty || form.get('contactPersonEmail').touched)">
+                      Please enter a valid email
+                    </small>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  
+                  <div class="col-md-10 txtcolor">
+
+                    <label class="form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="isUserNameAs"
+                        [value]="0" formControlName="isUserNameAs"
+                        checked
+                        > Use department email as username
+                    </label>
+                    <label class="form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="isUserNameAs"
+                        [value]="1" formControlName="isUserNameAs"
+                        >Use contact person email as username
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="form-actions right">
+                  <button type="reset" class="btn btn-raised btn-warning mr-1" (click)="onCancel()">
+                    <i class="ft-x"></i>
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-primary recover-pass"
+                    (click)="onSave()">
+                    <i class="fa fa-check-square-o"></i>
+                    Apply
+                  </button>
+                </div>
+
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
